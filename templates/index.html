@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome to one team solutions</title>
+  <link rel="shortcut icon" href='static/images/icon2.png' type="image/x-icon">
+  <!-- <img src="/static/images/6044809.jpg" alt="My image"/> -->
+  <!-- <link href='{% static "/images/.css" %}' rel='stylesheet' type='text/css'> -->
+  <link rel="stylesheet" href="static/css/login.css">
+  
+</head>
+<body>
+  <p>
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+    {% endfor %}
+  </p>
+
+    <!-- <div class="main">
+      <div class="icon">
+         <h2 class="logo">One Team Solution</h2>
+      </div>
+    </div> -->
+
+    <!-- {% if user.is_authenticated %}
+    <h3>Hello {{fname}}!</h3>
+    <h4>You're successfully logged in.</h4>
+    <button type="submit"><a href="/signout">SignOut</a></button>
+    {% else %} -->
+    <div class="intro">
+    <h1>One Team Solutions</h1>
+    <p>One Team Solutions EdTech Pvt Ltd is one of the Best Software Training Institutes in Kochi,Kerala.<br/> One Team Offers Python Training, PHP Training, Dot Net Training, Node Training, Angular Training, React Training, IOS/Android Training & Digital Marketing Training for Freshers and Experienced Professionals.<br/> The Training Team of One Team is well experienced and the best in the Industry</p>
+    </div>
+
+    <p>If you are a new user please signup</p>
+  <button type="submit"><a href="/signup">SignUp</a></button>
+    <br/>
+    <br/>
+    <p>Please signin to continue</p>
+  <button type="submit"><a href="/signin">SignIn</a></button>
+    <!-- {% endif %} -->
+  
+</body>
+</html>

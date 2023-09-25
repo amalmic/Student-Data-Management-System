@@ -1,0 +1,58 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
+
+    <form action="display">
+        <p><input type="submit" value="Display"><br></p>
+        <table border="1">
+            <tr>
+                <td>student_id</td>
+                <td>FirstName</td>
+                <td>LastName</td>
+                <td>Address</td>
+                <td>ContactNumber</td>
+                <td>Trainer</td>
+                <td>Course</td>
+                <td>Batch</td>
+
+            </tr>
+            {%for i in data%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.FirstName}}</td>
+                <td>{{i.LastName}}</td>
+                <td>{{i.Address}}</td>
+                <td>{{i.ContactNumber}}</td>
+                <td>{{i.Trainer}}</td>
+                <td>{{i.Course}}</td>
+                <td>{{i.Batch}}</td>
+
+            </tr>
+           {%endfor%}
+        </table>
+    </form>
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <button type="submit"><a href="/signout">SignOut</a></button>
+</head>
+<body>
+    <h3>Hello {{fname}}!</h3>
+    <h1> how are you</h1>
+</body>
+</html>

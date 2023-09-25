@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {{ Teachinfo.FirstName }}</title>
+    <link rel="shortcut icon" href='static/images/oneteam.png' type="image/x-icon">
+    <link rel="stylesheet" href="static/css/teacher.css">
+</head>
+<body>
+<div class="container">
+<div class="head">
+    <h3>Hello {{ Teachinfo.FirstName }}!</h3>
+</div>
+<div class="formbox" action="display">
+    <h1> Personal Information </h1>
+    <h4>First Name: {{ Teachinfo.FirstName }} </h4>
+    <p> Last Name: {{ Teachinfo.LastName }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Course: {{ Teachinfo.Course }}</p>
+</div>
+
+    <button onclick="window.location.href='admin/login/?next=/admin/'">Add Student</button>
+    <button type="submit"><a href="/signout">SignOut</a></button>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+
+.main{
+    width:100%;
+    background: linear-gradient(rgba(0,0,0.45,0.80)); 
+    background-color: rgba(0.26,0.70,0.45,0.20);
+    background-image: url("/static/images/background1.jpg");
+    /* filter: brightness(60%); */
+    background-position: left;
+    background-size: cover ;
+    height: 109vh; 
+ }  
+
+.navbar{
+    width:200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: black;
+}
+
+.formbox{
+    
+
+}

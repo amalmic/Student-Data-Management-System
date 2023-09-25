@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {{ stud.FirstName }}</title>
+    <link rel="shortcut icon" href='static/images/oneteam.png' type="image/x-icon">
+</head>
+<body>
+    
+    <h3>Hello {{ stud.FirstName }}!</h3>
+    <form action="display1">
+        <h1>Personal Information</h1>
+        <p>First Name: {{ stud.FirstName }} </p>
+        <p> Last Name: {{ stud.LastName }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Address: {{ stud.Address }}</p>
+        <p>Contact Number: {{ stud.ContactNumber }}</p>
+        <p>Trainer: {{ stud.Trainer }}</p>
+        <p>Course: {{ stud.Course }}</p>
+        <p>Batch: {{ stud.Batch }}</p>
+    </form>
+    <form >
+        <h1>Marks Card</h1>
+        <p>Mark Obtained: {{ marks.MarksObtained }}</p>
+        <p>Mark Out Of: {{ marks.OutOf }}</p>
+    </form>
+    <form >
+        <h1>Attendence</h1>
+        <p>
+            Total Days Present:{{attend.NoOfDaysPresent}} 
+        </p>
+        <p>
+            Total Number Of Woking Days: {{attend.TotalNumberOfDays}}
+        </p>
+    </form>
+    <button type="submit"><a href="/signout">SignOut</a></button>
+</body>
+</html>

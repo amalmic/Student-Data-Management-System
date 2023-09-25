@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="shortcut icon" href='static/images/oneteam.png' type="image/x-icon">
+    <link rel="stylesheet" href="static/css/login.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorgin="anonymous"></script>
+</head>
+<body>
+    <div class="msg">
+        
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    {% endfor %}
+     
+    </div>
+    
+<div class="formbox1"> 
+    <h1> Sign In </h1>
+
+
+    <form method="post" action="/signin">
+        {% csrf_token %}
+        <div class="inputgroup1">
+            <div class="inputfield1">
+                <i class="fa-solid fa-circle-user"></i>
+                
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Your Username" Required>
+            </div>
+            <div class="inputfield1">
+                <i class="fa-solid fa-lock"></i>
+                
+                <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Enter Your Password" Required>    
+            </div>
+            <div class="btnfield1">
+                <button type="submit" id="signinbtn" class="btn btn-primary">Sign In</button>
+                
+            </div>
+        </div>
+    </form>
+</div>
+
+            
+    
+
+
+<div class="container">
+  <div class="formbox">  
+    <h1 id="title">Sign Up</h1>
+
+    <form method="post" action="/signup">
+        {% csrf_token %}
+        <div class="inputgroup">
+            <div class="inputfield" id="nameField">
+                <i class="fa-solid fa-circle-user"></i>
+                
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username (use only letters and numbers)" Required>
+            </div>
+            <div class="inputfield">
+                <i class="fa-solid fa-user"></i>
+                
+            <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name" Required>
+            </div>
+            <div class="inputfield">
+                <i class="fa-solid fa-user"></i>
+               
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name" Required>
+            </div>
+            <div class="inputfield">
+                <i class="fa-solid fa-envelope"></i>
+                
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" Required>
+            </div>
+            <div class="inputfield">
+                <i class="fa-solid fa-lock"></i>
+                
+                <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Create Your Password" Required>
+            </div>
+            <div class="inputfield">
+                <i class="fa-solid fa-lock"></i>
+                
+            <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirm Your Password" Required>
+            </div>
+            <div class="btnfield">
+                <button type="submit" id="signupbtn" class="btn btn-primary">Sign Up</button>
+                
+            </div>
+
+        </div>
+    </form>
+  </div> 
+</div>  
+  
+
+</body>
+</html>
+    
